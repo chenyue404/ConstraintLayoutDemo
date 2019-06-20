@@ -2,13 +2,18 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <include layout="@layout/layout_ruler_horizontal" />
+    <include
+        android:id="@+id/i_h"
+        layout="@layout/layout_ruler_horizontal" />
 
-    <include layout="@layout/layout_ruler_vertical" />
+    <include
+        android:id="@+id/i_v"
+        layout="@layout/layout_ruler_vertical" />
 
     <TextView
         android:id="@+id/tv_01"
@@ -73,17 +78,18 @@
         android:layout_height="wrap_content"
         android:background="@android:color/holo_green_light"
         android:gravity="center"
+        android:onClick="gpVisible"
         android:text="tv_03"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/br_01" />
 
     <TextView
-        android:onClick="jumpToClock"
         android:id="@+id/tv_04"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:background="@color/colorAccent"
+        android:onClick="jumpToClock"
         android:paddingTop="10dp"
         android:paddingBottom="20dp"
         android:text="40sp"
@@ -99,6 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:background="@color/colorAccent"
+        android:onClick="packed"
         android:paddingTop="10dp"
         android:paddingBottom="60dp"
         android:text="20sp"
@@ -120,6 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:background="@android:color/darker_gray"
+        android:onClick="spread"
         android:padding="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_percent="0.2"
@@ -149,6 +157,7 @@
     </RelativeLayout>
 
     <android.support.constraint.Group
+        android:id="@+id/gp_0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
