@@ -27,8 +27,18 @@ public class ClockActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clock);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         findId();
         setTime();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
     @Override
@@ -41,16 +51,20 @@ public class ClockActivity extends AppCompatActivity {
         long currentTime = System.currentTimeMillis() / 1000;
         float sec_angle = (currentTime % 60) / (float) 60 * 360;
         float min_angle = (currentTime / 60 % 60) / (float) 60 * 360;
-        float hour_angle = ((currentTime / 60 / 60 % 24) + 8) / (float) 12 * 360 + (currentTime / 60 % 60) / (float) 60 * 30;
+        float hour_angle = ((currentTime / 60 / 60 % 24) + 8) / (float) 12 * 360
+                + (currentTime / 60 % 60) / (float) 60 * 30;
+
+        constraintSet.setRotation(R.id.v_sec, sec_angle);
+        constraintSet.setRotation(R.id.v_min, min_angle);
+        constraintSet.setRotation(R.id.v_hour, hour_angle);
 
         constraintSet.constrainCircle(R.id.v_sec, R.id.v_center, dpToPx(60), sec_angle);
         constraintSet.constrainCircle(R.id.v_min, R.id.v_center, dpToPx(40), min_angle);
         constraintSet.constrainCircle(R.id.v_hour, R.id.v_center, dpToPx(35), hour_angle);
 
+
+//        TransitionManager.beginDelayedTransition(cl_root);
         constraintSet.applyTo(cl_root);
-        v_sec.setRotation(sec_angle);
-        v_min.setRotation(min_angle);
-        v_hour.setRotation(hour_angle);
 
         runnable = new Runnable() {
             @Override
