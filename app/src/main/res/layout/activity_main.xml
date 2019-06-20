@@ -79,6 +79,7 @@
         app:layout_constraintStart_toEndOf="@id/br_01" />
 
     <TextView
+        android:onClick="jumpToClock"
         android:id="@+id/tv_04"
         android:layout_width="wrap_content"
         android:layout_height="0dp"

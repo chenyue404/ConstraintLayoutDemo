@@ -2,8 +2,26 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <AnalogClock
+        android:id="@+id/analogClock"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format24Hour="hh 时 mm 分 ss 秒"
+        app:layout_constraintEnd_toEndOf="@id/analogClock"
+        app:layout_constraintStart_toStartOf="@id/analogClock"
+        app:layout_constraintTop_toBottomOf="@id/analogClock" />
 
     <View
         android:id="@+id/v_center"
@@ -16,25 +34,36 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/v_min"
-        android:layout_width="5dp"
+        android:id="@+id/v_sec"
+        android:layout_width="2dp"
         android:layout_height="120dp"
-        android:background="@android:color/darker_gray"
-        android:rotation="180"
+        android:background="@android:color/holo_red_light"
+        android:rotation="0"
         app:layout_constraintCircle="@id/v_center"
-        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleAngle="0"
         app:layout_constraintCircleRadius="60dp"
         tools:ignore="MissingConstraints" />
 
     <View
-        android:id="@+id/v_hour"
+        android:id="@+id/v_min"
         android:layout_width="5dp"
         android:layout_height="80dp"
+        android:background="@android:color/darker_gray"
+        android:rotation="180"
+        app:layout_constraintCircle="@id/v_center"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="40dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/v_hour"
+        android:layout_width="8dp"
+        android:layout_height="70dp"
         android:background="@android:color/black"
         android:rotation="255"
         app:layout_constraintCircle="@id/v_center"
         app:layout_constraintCircleAngle="255"
-        app:layout_constraintCircleRadius="40dp"
+        app:layout_constraintCircleRadius="35dp"
         tools:ignore="MissingConstraints" />
 
 
@@ -138,7 +167,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/tv_010"
+        android:id="@+id/tv_10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="10"

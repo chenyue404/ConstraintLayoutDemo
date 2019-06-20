@@ -1,10 +1,12 @@
 package com.chenyue404.constraintlayoutdemo;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,4 +28,7 @@ public class MainActivity extends AppCompatActivity {
         return dm.widthPixels;
     }
 
+    public void jumpToClock(View view) {
+        startActivity(new Intent(this, ClockActivity.class));
+    }
 }
