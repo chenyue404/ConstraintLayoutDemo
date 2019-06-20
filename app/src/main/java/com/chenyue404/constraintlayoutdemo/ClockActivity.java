@@ -86,7 +86,7 @@ public class ClockActivity extends AppCompatActivity {
         constraintSet.clone(cl_root);
     }
 
-    public int dpToPx(int dp) {
+    public int dpToPx(float dp) {
         return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
     }
 }

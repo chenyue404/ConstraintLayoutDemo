@@ -38,22 +38,22 @@
         android:layout_width="8dp"
         android:layout_height="70dp"
         android:background="@android:color/black"
-        android:rotation="255"
         app:layout_constraintCircle="@id/v_center"
-        app:layout_constraintCircleAngle="255"
         app:layout_constraintCircleRadius="35dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_constraintCircleAngle="255"
+        tools:rotation="255" />
 
     <View
         android:id="@+id/v_min"
         android:layout_width="5dp"
         android:layout_height="80dp"
         android:background="@android:color/darker_gray"
-        android:rotation="180"
         app:layout_constraintCircle="@id/v_center"
-        app:layout_constraintCircleAngle="180"
         app:layout_constraintCircleRadius="40dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_constraintCircleAngle="180"
+        tools:rotation="180" />
 
     <View
         android:id="@+id/v_sec"
