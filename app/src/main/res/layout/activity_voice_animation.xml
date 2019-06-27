@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VoiceAnimationActivity">
+
+
+    <View
+        android:id="@+id/v_0"
+        android:layout_width="10dp"
+        android:layout_height="100dp"
+        android:background="@drawable/view_voice_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/v_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_1"
+        android:layout_width="10dp"
+        android:layout_height="120dp"
+        android:background="@drawable/view_voice_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/v_2"
+        app:layout_constraintStart_toEndOf="@id/v_0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_2"
+        android:layout_width="10dp"
+        android:layout_height="70dp"
+        android:background="@drawable/view_voice_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/v_3"
+        app:layout_constraintStart_toEndOf="@id/v_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_3"
+        android:layout_width="10dp"
+        android:layout_height="90dp"
+        android:background="@drawable/view_voice_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/v_4"
+        app:layout_constraintStart_toEndOf="@id/v_2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_4"
+        android:layout_width="10dp"
+        android:layout_height="150dp"
+        android:background="@drawable/view_voice_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/v_5"
+        app:layout_constraintStart_toEndOf="@id/v_3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_5"
+        android:layout_width="10dp"
+        android:layout_height="130dp"
+        android:background="@drawable/view_voice_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/v_6"
+        app:layout_constraintStart_toEndOf="@id/v_4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_6"
+        android:layout_width="10dp"
+        android:layout_height="100dp"
+        android:background="@drawable/view_voice_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/v_7"
+        app:layout_constraintStart_toEndOf="@id/v_5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_7"
+        android:layout_width="10dp"
+        android:layout_height="120dp"
+        android:background="@drawable/view_voice_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/v_8"
+        app:layout_constraintStart_toEndOf="@id/v_6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_8"
+        android:layout_width="10dp"
+        android:layout_height="70dp"
+        android:background="@drawable/view_voice_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/v_9"
+        app:layout_constraintStart_toEndOf="@id/v_7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_9"
+        android:layout_width="10dp"
+        android:layout_height="90dp"
+        android:background="@drawable/view_voice_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/v_10"
+        app:layout_constraintStart_toEndOf="@id/v_8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_10"
+        android:layout_width="10dp"
+        android:layout_height="120dp"
+        android:background="@drawable/view_voice_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/v_11"
+        app:layout_constraintStart_toEndOf="@id/v_9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_11"
+        android:layout_width="10dp"
+        android:layout_height="150dp"
+        android:background="@drawable/view_voice_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/v_10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
