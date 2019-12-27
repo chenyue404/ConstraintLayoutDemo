@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void jumpToClock(View view) {
-        startActivity(new Intent(this, VoiceAnimationActivity.class));
+//        startActivity(new Intent(this, VoiceAnimationActivity.class));
+//        startActivity(new Intent(this, TagAnimationActivity.class));
+        startActivity(new Intent(this, ClockActivity.class));
     }
 
     public void packed(View view) {
